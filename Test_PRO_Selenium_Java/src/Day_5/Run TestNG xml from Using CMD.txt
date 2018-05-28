@@ -1,0 +1,63 @@
+1- Run java file from CMD
+**************************
+
+1- go to prject directory:
+D:\Eclips_Source\eclipse_Mars2_WorkSpace\Test_PRO_Selenium_Java
+
+2- open cmd after and write
+
+--------------------------------------
+java -cp "libs\*;bin" org.testng.TestNG 
+
+Note:
+-cp mean class path
+
+--------------------------------------
+example:
+----------
+If xml directory: D:\Eclips_Source\eclipse_Mars2_WorkSpace\Test_PRO_Selenium_Java\src\Day_5\Run.xml
+-----------------
+So command is:
+--------------
+java -cp "libs\*;bin" org.testng.TestNG D:\Eclips_Source\eclipse_Mars2_WorkSpace\Test_PRO_Selenium_Java\src\Day_5\Run.xml
+
+=============================================
+2- Send parameter from CMD
+***************************
+use same command + -D[Keynamein java file]=value  before org.testng.TestNG 
+
+
+
+java -cp "libs\*;bin" -DParam1=TestIsWorks org.testng.TestNG D:\Eclips_Source\eclipse_Mars2_WorkSpace\Test_PRO_Selenium_Java\src\Day_5\Run.xml
+
+or 
+java -cp "libs\*;bin" -DParam1="Test Is works" org.testng.TestNG D:\Eclips_Source\eclipse_Mars2_WorkSpace\Test_PRO_Selenium_Java\src\Day_5\Run.xml
+=============================================
+3- send Browser value from CMD
+*******************************
+send browser=chrome:
+
+java -cp "libs\*;bin" -DParam1=TestIsWorks -Dbrowser=chrome org.testng.TestNG D:\Eclips_Source\eclipse_Mars2_WorkSpace\Test_PRO_Selenium_Java\src\Day_5\Run.xml
+
+send browser=firefox:
+java -cp "libs\*;bin" -DParam1=TestIsWorks -Dbrowser=firefox org.testng.TestNG D:\Eclips_Source\eclipse_Mars2_WorkSpace\Test_PRO_Selenium_Java\src\Day_5\Run.xml
+=============================================
+4- To run parallel test cases:
+*******************************
+A- you can run 1 xml fine that configure parallel tests like --> Run_Supper_Calculator_Parallel.xml
+or 
+B- Run more that CMD shell that execute different Virtual Machine in every run.
+=============================================
+5- To run in other machine from CMD:
+*************************************
+1- Copy (bin & xml & Library) folders to new machine.
+2- Run CMD command. (in folders directory)
+
+OR
+
+1- Export (Src) folder - From IDE as in image.
+2- 2- Run CMD command (in exported file directory)
+=============================================
+
+
+
